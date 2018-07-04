@@ -1,0 +1,36 @@
+<br>
+<h1>Edit your profile</h1>
+
+{{#if error}}
+<div class="error">Oh no! Something went wrong! And if you wanna be my lover, you gotta go try again.</div>
+<audio id="stop" autoplay>
+  <source src="stop.mp3" type="audio/mpeg">
+</audio>
+{{/if}}
+<br>
+<form id="profileEdit" method="POST">
+    <span class="credentials">First Name:</span>
+    <input class="editProfile" type="text" name="first" value="{{first}}">
+    <br>
+    <span class="credentials">Last Name:</span>
+    <input class="editProfile" type="text" name="last" value="{{last}}">
+    <br>
+    <span class="credentials">Email Address:</span>
+    <input class="editProfile" type="email" name="email" value="{{email}}">
+    <br>
+    <span class="credentials">Password:</span>
+    <input class="editProfile" type="password" name="password" value="">
+    <br>
+    <span class="credentials">Age:</span>
+    <input class="editProfile" type="text" name="age" value="{{age}}">
+    <br>
+    <span class="credentials">City:</span>
+    <input class="editProfile" type="text" name="city" value="{{city}}">
+    <br>
+    <span class="credentials">Homepage:</span>
+    <input class="editProfile" type="url" name="url" value="{{url}}">
+    <input type="hidden" name="sig" value="">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <br>
+    <button class="editProfile" type="submit" name="button">Submit</button>
+</form>

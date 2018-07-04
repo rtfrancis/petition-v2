@@ -1,0 +1,12 @@
+<div class="citysigners">
+    <img id="spice4" src="http://cdn1-www.musicfeeds.com.au/assets/uploads/spice-Cropped-671x377.jpg" alt="">
+    <h2>These people have signed the petition in <span>{{here}}</span></h2>
+        {{#each signers}}
+            <p>
+            {{{rendernew url first last}}}
+            {{{renderstuff age}}}
+            <p>
+        {{/each}}
+        <h3><a href="/thanks">Return to signature page</a></h3>
+        <h3><a href="/logout">Log out here</a></h3>
+</div>

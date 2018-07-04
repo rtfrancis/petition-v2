@@ -1,0 +1,13 @@
+<div class="signers">
+    <br>
+    <img class="jumping" src="spice-world-the-movie.jpg" alt="">
+    <h2>These people have signed the petition</h2>
+        {{#each signers}}
+            <p>
+                {{{renderurl url first last}}}
+                {{{renderstuff city age}}}
+            </p>
+        {{/each}}
+        <h2><a href="/thanks">Return to signature page</a></h2>
+        <h3><a href="/logout">Log out here</a></h3>
+</div>
