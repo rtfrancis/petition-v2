@@ -299,7 +299,7 @@ app.get("/signers", requireUserId, requireSignature, function(req, res) {
                     },
                     renderurl: function(url, first, last) {
                         if (url) {
-                            return `<a class="links" href="${url}">${first} ${last}</a>`;
+                            return `<a class="links" target="_blank" href="${url}">${first} ${last}</a>`;
                         } else {
                             return `<span class="names">${first} ${last}</span>`;
                         }
@@ -352,7 +352,7 @@ app.get("*", function(req, res) {
     res.redirect("/");
 });
 
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 8080, () => console.log("I'm listening"));
 
 function requireNoSignature(req, res, next) {
     if (req.session.sigId) {
@@ -385,3 +385,18 @@ function requireLoggedOut(req, res, next) {
         next();
     }
 }
+
+
+
+
+
+
+
+
+
+RETURNING id;
+
+
+
+
+req.session.userId = data.rows[0].id

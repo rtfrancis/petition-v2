@@ -1,17 +1,24 @@
-<h1>Thanks for registering!</h1>
-<img src="spiceGirls.jpg" alt="">
-<h3>Please tell us a little more about yourself<h3>
+<div class="photoback">
+    <img src="./stall.jpg" alt="">
+</div>
+<h1 class="heading">Wo sind die Toiletten?</h1>
+<div class="editPage">
+    <h1>Thanks for registering!</h1>
+    <!-- <img src="spiceGirls.jpg" alt=""> -->
+    <h3>Please tell us a little more about yourself<h3>
 
-<form id="profileTable" method="POST">
-    <input class="profiletable" type="text" name="age" placeholder="age">
-    <br>
-    <input class="profiletable" type="text" name="city" placeholder="city">
-    <br>
-    <input class="profiletable" type="url" name="url" placeholder="url">
+    <form id="profileTable" method="POST">
+        <input class="profiletable" type="text" name="age" placeholder="age">
+        <br>
+        <input class="profiletable" type="text" name="city" placeholder="city">
+        <br>
+        <input class="profiletable" type="url" name="url" placeholder="url">
 
-    <input type="hidden" name="_csrf" value="{{csrfToken}}">
-    <br>
-    <button type="submit" name="button">Continue</button>
-</form>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <br>
+        <button type="submit" name="button">Continue</button>
+    </form>
 
-<h3><a href="/petition">Skip this step</a></h3>
+    <h3><a href="/petition">Skip this step</a></h3>
+
+</div>

@@ -1,36 +1,92 @@
-<br>
-<h1>Edit your profile</h1>
+<div class="photoback">
+    <img src="./stall.jpg" alt="">
+</div>
+<h1 class="heading">Wo sind die Toiletten?</h1>
+<div class="profileEditPage">
+    <h1>Edit your profile</h1>
+    {{#if error}}
+        <div class="error">Oh no! Something went wrong!</div>
+    {{/if}}
 
-{{#if error}}
-<div class="error">Oh no! Something went wrong! And if you wanna be my lover, you gotta go try again.</div>
-<audio id="stop" autoplay>
-  <source src="stop.mp3" type="audio/mpeg">
-</audio>
-{{/if}}
-<br>
-<form id="profileEdit" method="POST">
-    <span class="credentials">First Name:</span>
-    <input class="editProfile" type="text" name="first" value="{{first}}">
-    <br>
-    <span class="credentials">Last Name:</span>
-    <input class="editProfile" type="text" name="last" value="{{last}}">
-    <br>
-    <span class="credentials">Email Address:</span>
-    <input class="editProfile" type="email" name="email" value="{{email}}">
-    <br>
-    <span class="credentials">Password:</span>
-    <input class="editProfile" type="password" name="password" value="">
-    <br>
-    <span class="credentials">Age:</span>
-    <input class="editProfile" type="text" name="age" value="{{age}}">
-    <br>
-    <span class="credentials">City:</span>
-    <input class="editProfile" type="text" name="city" value="{{city}}">
-    <br>
-    <span class="credentials">Homepage:</span>
-    <input class="editProfile" type="url" name="url" value="{{url}}">
-    <input type="hidden" name="sig" value="">
-    <input type="hidden" name="_csrf" value="{{csrfToken}}">
-    <br>
-    <button class="editProfile" type="submit" name="button">Submit</button>
-</form>
+    <form id="profileEdit" method="POST">
+
+        <div class="flex-grid">
+            <div class="col">
+                <span>First Name:</span>
+                <br>
+                <input type="text" name="first" value="{{first}}">
+            </div>
+            <div class="col">
+                <span>Last Name:</span>
+                <br>
+                <input type="text" name="last" value="{{last}}">
+            </div>
+        </div>
+        <div class="flex-grid">
+            <div class="col">
+                <span>Email Address:</span>
+                <br>
+                <input type="email" name="email" value="{{email}}" required>
+            </div>
+            <div class="col">
+                <span>Password:</span>
+                <br>
+                <input type="password" name="password" value="">
+            </div>
+        </div>
+        <div class="flex-grid">
+            <div class="col">
+                <span>Age:</span>
+                <br>
+                <input type="text" name="age" value="{{age}}">
+            </div>
+            <div class="col">
+                <span>City:</span>
+                <br>
+                <input type="text" name="city" value="{{city}}">
+            </div>
+        </div>
+        <div class="flex-grid">
+            <div class="col">
+                <span >Homepage:</span>
+                <br>
+                <input id="urlInput" type="url" name="url" value="{{url}}">
+
+            </div>
+        </div>
+
+
+        <!-- <div class="">
+            <span class="credentials">First Name:</span>
+            <input class="editProfile" type="text" name="first" value="{{first}}">
+            <br>
+            <span class="credentials">Last Name:</span>
+            <input class="editProfile" type="text" name="last" value="{{last}}">
+            <br>
+        </div>
+        <div class="">
+            <span class="credentials">Email Address:</span>
+            <input class="editProfile" type="email" name="email" value="{{email}}">
+            <br>
+            <span class="credentials">Password:</span>
+            <input class="editProfile" type="password" name="password" value="">
+            <br>
+        </div>
+        <div class="">
+            <span class="credentials">Age:</span>
+            <input class="editProfile" type="text" name="age" value="{{age}}">
+            <br>
+            <span class="credentials">City:</span>
+            <input class="editProfile" type="text" name="city" value="{{city}}">
+            <br>
+        </div> -->
+
+        <input type="hidden" name="sig" value="">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+        <button class="editProfileButton" type="submit" name="button">Submit</button>
+    </form>
+
+    <a href="/petition">Return to profile without saving</a>
+
+</div>

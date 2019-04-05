@@ -1,44 +1,36 @@
+<div class="registerContainer">
+    <!-- <h1 class="heading">Wo sind die Toiletten?</h1> -->
+    <div class="photoback">
+        <img src="./stall.jpg" alt="">
+    </div>
+    <h1 class="heading">Wo sind die Toiletten?</h1>
 
-<div class="home">
-    <img id='s' class='spicegirls' src="S.jpeg" alt="">
-    <img id='p' class='spicegirls' src="P.jpeg" alt="">
-    <img id='i' class='spicegirls' src="I.jpeg" alt="">
-    <img id='c' class='spicegirls' src="C.jpg" alt="">
-    <img id='e' class='spicegirls' src="E.jpeg" alt="">
-    <br>
+    <div class="home">
+        <div class="registerBox">
+            <h3>-- Register here --</h3>
 
-    <h2>Are you feelin' sad and low? With no one to take you where you gotta go?</h2>
+            {{#if error}}
+            <div class="error">Oh no, something went wrong!</div>
+            <br>
+            {{/if}}
 
-    <h3>Have you been unable to <span class="songs">spice up your life</span> since 1998 when Geri Halliwell made the biggest mistake of all our lives?</h3>
+            <form method="POST">
+                <input class="registertable" type="text" name="first" placeholder="first name">
+                <input class="registertable" type="text" name="last" placeholder="last name">
+                <input class="registertable" type="email" name="email" placeholder="e-mail address">
+                <input class="registertable" type="password" name="password" placeholder="password">
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
 
-    <h2>Well I'll tell you what I want, what I really, really want. </h2>
+                <button type="submit" name="button">Register</button>
+            </form>
+            <br>
+            <h3>If you're already registered, please <a href="/login">log in</a> here</h3>
+        </div>
+        <div class="infoBox">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
 
-    <h2>Please join us and <span class="songs">say you'll be there</span> by making<span class="songs"> 2 become 1 </span>with your signature and our petition. </h2>
 
-    <h2>Let's reunite the Spice Girls!</h2>
-
-    <h2>Together, we can get what we want, what we really, really want. </h2>
-
-
-<h3>-- Register here --</h3>
-
-{{#if error}}
-<div class="error">Oh no, something went wrong! And if you wanna be my lover, you gotta go try again.</div>
-<audio id="stop" autoplay>
-  <source src="stop.mp3" type="audio/mpeg">
-</audio>
-<br>
-{{/if}}
-
-<form method="POST">
-    <input class="registertable" type="text" name="first" placeholder="first name">
-    <input class="registertable" type="text" name="last" placeholder="last name">
-    <input class="registertable" type="email" name="email" placeholder="e-mail address">
-    <input class="registertable" type="password" name="password" placeholder="password">
-    <input type="hidden" name="_csrf" value="{{csrfToken}}">
-
-    <button type="submit" name="button">Register</button>
-</form>
-<br>
-<h3>If you're already registered, please <a href="/login">log in</a> here</h3>
+    </div>
 </div>

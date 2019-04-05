@@ -1,20 +1,26 @@
-<br>
-<br>
-<img id="girlpower" src="/Spice-Girls.jpg" alt="">
-<br>
-<h1>Thanks for signing, <span class="firstName">{{first}}! </span></h1>
+<div class="thanksPage">
+    <div class="photoback">
+        <img src="./stall.jpg" alt="">
+    </div>
+    <h1 class="heading">Wo sind die Toiletten?</h1>
+    <div class="thanksContents">
 
-<img id="sigPic" src="{{signature}}">
+        <h1>Thanks for signing, <span class="firstName">{{first}}! </span></h1>
+
+        <img id="sigPic" src="{{signature}}">
 
 
 
-<form id='deletesig' method="POST">
-    <input type="hidden" name="sig" value="">
-    <input type="hidden" name="_csrf" value="{{csrfToken}}">
-    <button type="submit" name="button">Delete signature</button>
-</form>
+        <form id='deletesig' method="POST">
+            <input type="hidden" name="sig" value="">
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <button type="submit" name="button">Delete signature</button>
+        </form>
 
-<h2><a href="/signers">Click here to see all {{number}} signers</a></h2>
+        <h2><a href="/signers">Click here to see all {{number}} signers</a></h2>
 
-<h3><a href="/editprofile">Edit Profile</a></h3>
-<h3><a href="/logout">Log Out</a></h3>
+        <h3><a href="/editprofile">Edit Profile</a></h3>
+        <h3><a href="/logout">Log Out</a></h3>
+    </div>
+
+</div>

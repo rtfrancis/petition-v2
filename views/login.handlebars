@@ -1,31 +1,32 @@
+<div class="homeLogin">
+    <!-- <h1 class="whatever">Wo sind die Toiletten?</h1> -->
+    <div class="photoback">
+        <img src="./stall.jpg" alt="">
+    </div>
+    <h1 class="heading">Wo sind die Toiletten?</h1>
 <div class="home">
-    <img id='s' class='spicegirls' src="S.jpeg" alt="">
-    <img id='p' class='spicegirls' src="P.jpeg" alt="">
-    <img id='i' class='spicegirls' src="I.jpeg" alt="">
-    <img id='c' class='spicegirls' src="C.jpg" alt="">
-    <img id='e' class='spicegirls' src="E.jpeg" alt="">
+    <div class="loginBox">
+        <h1>Please sign in here</h1>
+        {{#if error}}
+        <div class="error">Oh no, something went wrong!</div>
 
+        {{/if}}
+        <br>
+        <form method="POST">
+            <span class="credentials">Email Address:</span>
+            <input class="logintable" type="text" name="email" placeholder="email">
+            <span class="credentials">Password:</span>
+            <input class="logintable" type="password" name="password" placeholder="password">
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <br>
+            <button type="submit" name="button">Log In</button>
+        </form>
+        <br>
+        <h3><a href="/register">Back to registration</a></h3>
 
-<br>
-<br>
-<h1>Please sign in here</h1>
-{{#if error}}
-<div class="error">Oh no, something went wrong! And if you wanna be my lover, you gotta go try again.</div>
-<audio id="stop" autoplay>
-  <source src="stop.mp3" type="audio/mpeg">
-</audio>
-{{/if}}
-<br>
-<form method="POST">
-    <span class="credentials">Email Address:</span>
-    <input class="logintable" type="text" name="email" placeholder="email">
-    <span class="credentials">Password:</span>
-    <input class="logintable" type="password" name="password" placeholder="password">
-    <input type="hidden" name="_csrf" value="{{csrfToken}}">
-    <br>
-    <button type="submit" name="button">Log In</button>
-</form>
-<br>
-<h3><a href="/register">Back to registration</a></h3>
+    </div>
+</div>
+</div>
+
 
 </div>
