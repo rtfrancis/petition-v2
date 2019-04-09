@@ -6,12 +6,15 @@
 <div class="signByCity">
 
     <h2>These people have signed the petition in <span>{{here}}</span></h2>
+    <div class="signersDisplay">
         {{#each signers}}
             <p>
             {{{rendernew url first last}}}
             {{{renderstuff age}}}
             <p>
         {{/each}}
+    </div>
+
         <h3><a href="/thanks">Return to signature page</a></h3>
         <h3><a href="/logout">Log out here</a></h3>
 </div>

@@ -15,20 +15,49 @@
             {{/if}}
 
             <form method="POST">
-                <input class="registertable" type="text" name="first" placeholder="first name">
+                <!-- <input class="registertable" type="text" name="first" placeholder="first name">
                 <input class="registertable" type="text" name="last" placeholder="last name">
                 <input class="registertable" type="email" name="email" placeholder="e-mail address">
                 <input class="registertable" type="password" name="password" placeholder="password">
                 <input type="hidden" name="_csrf" value="{{csrfToken}}">
 
+                <button type="submit" name="button">Register</button> -->
+                <div class="registerGrid">
+                    <div class="flex-grid">
+                        <div class="col">
+                            <span>First Name:</span>
+                            <br>
+                            <input type="text" name="first">
+                        </div>
+                        <div class="col">
+                            <span>Last Name:</span>
+                            <br>
+                            <input type="text" name="last">
+                        </div>
+                    </div>
+                    <div class="flex-grid">
+                        <div class="col">
+                            <span>Email Address:</span>
+                            <br>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="col">
+                            <span>Password:</span>
+                            <br>
+                            <input type="password" name="password" value="">
+                        </div>
+                    </div>
+                </div>
+
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
                 <button type="submit" name="button">Register</button>
             </form>
             <br>
             <h3>If you're already registered, please <a href="/login">log in</a> here</h3>
         </div>
         <div class="infoBox">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="firstP">Have you ever been wandering through Berlin and noticed the lack of public toilets? Maybe on sunny day in Weinbergspark, while having a beer with friends you realised that your only option for a toilet was to sneak into a nearby restaurant or cafe. Or possibly at Volkspark Friedrichshain, when the relief you felt once spotting their toilets near the park’s entrance quickly turned into dismay as you approach and realise they are closed for the season. Or perhaps your situation was coming across the public toilets that cost 50 cents, but then finding that you spent your last bit of change already.</p>
+            <p class="secondP">Whatever the circumstances may have been, there should have been a public toilet available to you. Paris has approximately 400 public (and free) toilets spread throughout the city, and there’s no reason that Berlin can’t follow their lead and attempt to offer more facilities to its residents and visitors. Please join us and sign our petition to get more facilities and easier access to public toilets throughout the city of Berlin.</p>
         </div>
 
 

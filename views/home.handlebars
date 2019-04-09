@@ -12,16 +12,16 @@
         <div class="error">Oh no! Something went wrong!</div>
     {{/if}}
         <div class="canvasStuff">
-            <canvas id="canv" width="400" height="100"></canvas>
-            <br>
+            <canvas id="canv" width="350" height="100"></canvas>
+            <!-- <br> -->
             <button id='clear' type="button" name="button">Clear Signature</button>
-            <br>
+            <!-- <br> -->
 
-            <br>
+            <!-- <br> -->
             <form method="POST">
                 <input id="secret" type="hidden" name="sig" value="">
                 <input type="hidden" name="_csrf" value="{{csrfToken}}">
-                <button type="submit" name="button">Submit</button>
+                <button id="sigSubmit" type="submit" name="button">Submit</button>
             </form>
         </div>
 

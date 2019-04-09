@@ -19,10 +19,11 @@ module.exports.signPetition = function signPetition(user_id, sig) {
 module.exports.getSigners = function getSigners() {
     return db.query(`SELECT users.first, users.last, age, city, url
                     FROM signatures
-                    LEFT JOIN user_profiles
-                    ON signatures.user_id = user_profiles.user_id
                     LEFT JOIN users
-                    ON user_profiles.user_id = users.id
+                    ON signatures.user_id = users.id
+                    LEFT JOIN user_profiles
+                    ON users.id = user_profiles.user_id
+
                     `);
 };
 
@@ -73,7 +74,9 @@ module.exports.userProfile = function userProfile(age, city, url, user_id) {
 module.exports.signersByCity = function signersByCity(city) {
     return db.query(
         `SELECT users.first, users.last, age, city, url
-        FROM users
+        FROM signatures
+        LEFT JOIN users
+        ON signatures.user_id = users.id
         JOIN user_profiles
         ON users.id = user_profiles.user_id
         WHERE LOWER(city) = LOWER($1)
@@ -158,7 +161,7 @@ module.exports.hashPassword = function hashPassword(plainTextPassword) {
             if (err) {
                 return reject(err);
             }
-            console.log(salt);
+            // console.log(salt);
             bcrypt.hash(plainTextPassword, salt, function(err, hash) {
                 if (err) {
                     return reject(err);

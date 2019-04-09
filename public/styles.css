@@ -5,14 +5,6 @@ body {
     margin: 0;
     font-family: "Tajawal", sans-serif;
     font-weight: 400;
-    /* background: #738E70; */
-    /* background: rgb(222, 227, 230); */
-
-    /* background: linear-gradient(
-        0deg,
-        rgba(187, 206, 223, 1) 3%,
-        rgba(255, 255, 255, 1) 81%
-    ); */
     height: 100%;
     overflow-y: scroll;
 }
@@ -49,8 +41,8 @@ h3 {
     width: 100vw;
     position: fixed;
     top: 0;
-    /* border: 1px solid black; */
 }
+
 .photoback img{
     /* height: 100%; */
     width: 100%;
@@ -101,18 +93,29 @@ h3 {
 
 .infoBox{
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 3px;
-    height: 400px;
+    border-radius: 5px;
+    height: 450px;
+    max-height: 500px;
     width: 40%;
     /* border: 1px solid black; */
     z-index: 34;
-    padding: 15px;
+    padding: 25px;
+    /* padding-top: 10px; */
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    font-weight: bold;
 }
-
+/* .infoBox p{
+    margin-top: 0px;
+} */
+/* .firstP{
+    margin-top: 100px;
+} */
+/* .secondP{
+    margin-top: -10px;
+} */
 .logintable {
     display: block;
     text-align: center;
@@ -151,10 +154,15 @@ h3 {
     width: 40%;
     min-width: 450px;
     margin: 0 auto;
+    height: 500px;
+    max-height: 600px;
     background: rgba(255, 255, 255, 0.8);
+
 }
 .canvasStuff{
     text-align: center;
+    margin-bottom: 30px;
+    /* border: 1px solid black; */
 }
 .thanksContents{
     padding: 40px;
@@ -222,9 +230,13 @@ h3 {
     border-radius: 5px;
     height: 20px;
 }
+.registerGrid{
+    width: 70%;
+    margin: 0 auto;
+}
 .editProfileButton{
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: -10px;
+    margin-bottom: 10px;
     height: 30px;
     width: 75px;
     border-radius: 5px;
@@ -238,23 +250,41 @@ h3 {
     text-align: center;
     margin: 0 auto;
 }
-
+/* #deletesig button{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    outline: none;
+} */
 #canv {
     border: 2px solid black;
     color: black;
     cursor: crosshair;
     display: block;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
-/* img {
-    height: 200px;
-    margin: 0 auto;
-    display: block;
-} */
-
+#clear, #deletesig button{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    outline: none;
+}
+#sigSubmit{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 #sigPic {
     height: 100px;
+    display: block;
     margin: 0 auto;
 }
 
@@ -271,15 +301,24 @@ h3 {
     font-size: 18px;
 }
 
-
+.profiletable{
+    display: block;
+    border-radius: 4px;
+    /* margin-bottom: 3px; */
+    height: 25px;
+    text-align: center;
+    margin: 0 auto;
+}
 
 h2 {
     text-align: center;
 }
-.spicegirls {
-    display: inline-block;
-    position: relative;
-    height: 150px;
+.signersDisplay{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+#profileTable input{
+    margin-bottom: 20px;
 }
 
 /* .citysigners {
@@ -299,12 +338,7 @@ h2 {
 }
 
 
-.profiletable {
-    /* display: block; */
 
-    text-align: center;
-    margin: 1px auto;
-}
 .editProfile {
     /* display: block; */
 
@@ -328,129 +362,12 @@ h2 {
     margin: 0 auto;
 }
 
-#spice4 {
-    height: 250px;
-}
 
 .jumping {
     height: 300px;
 }
 .songs {
     text-transform: uppercase;
-}
-
-#s {
-    position: relative;
-    left: -250px;
-    animation-fill-mode: forwards;
-    animation: slide-s 7s infinite;
-}
-#p {
-    position: relative;
-    left: -150px;
-    animation-fill-mode: forwards;
-    animation: slide-p 7s infinite;
-}
-#i {
-    animation-fill-mode: forwards;
-    animation: i 7s infinite;
-}
-
-#c {
-    position: relative;
-    left: 150px;
-    animation-fill-mode: forwards;
-    animation: slide-c 7s infinite;
-}
-
-#e {
-    position: relative;
-    left: 250px;
-    animation-fill-mode: forwards;
-    animation: slide-e 7s infinite;
-}
-
-@keyframes slide-s {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(250px);
-    }
-    100% {
-        transform: translateX(250px);
-    }
-}
-@keyframes slide-p {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(150px);
-    }
-    100% {
-        transform: translateX(150px);
-    }
-}
-
-@keyframes i {
-    0% {
-        transform: scale(0, 0);
-    }
-    50% {
-        transform: scale(1, 1);
-    }
-    100% {
-        transform: scale(1, 1);
-    }
-}
-
-@keyframes slide-c {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-150px);
-    }
-    100% {
-        transform: translateX(-150px);
-    }
-}
-
-@keyframes slide-e {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-250px);
-    }
-    100% {
-        transform: translateX(-250px);
-    }
-}
-
-@keyframes slideright {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(95px);
-    }
-    100% {
-        transform: translateX(95px);
-    }
-}
-
-@keyframes slideleft {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-190px);
-    }
-    100% {
-        transform: translateX(-190px);
-    }
 }
 
 .songs {

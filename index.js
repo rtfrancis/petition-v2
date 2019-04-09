@@ -51,6 +51,7 @@ app.get("/register", requireLoggedOut, function(req, res) {
 });
 
 app.post("/register", function(req, res) {
+    console.log(req.body);
     db
         .hashPassword(req.body.password)
         .then(function(hashedPass) {
@@ -282,6 +283,7 @@ app.get("/signers", requireUserId, requireSignature, function(req, res) {
     return db
         .getSigners()
         .then(function(result) {
+            console.log(result);
             res.render("signers", {
                 layout: "main",
                 signers: result.rows,
@@ -385,18 +387,3 @@ function requireLoggedOut(req, res, next) {
         next();
     }
 }
-
-
-
-
-
-
-
-
-
-RETURNING id;
-
-
-
-
-req.session.userId = data.rows[0].id
