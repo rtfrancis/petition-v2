@@ -1,10 +1,18 @@
 const express = require("express");
 const app = express();
-const secrets = require("./secrets");
+
 const db = require("./db.js");
 const cookieSession = require("cookie-session");
 const csurf = require("csurf");
 const hb = require("express-handlebars");
+
+let secrets;
+
+if (process.env.NODE_ENV == "production") {
+    secrets = process.env; // in prod the secrets are environment variables
+} else {
+    secrets = require("./secrets"); // secrets.json is in .gitignore
+}
 
 app.engine("handlebars", hb());
 app.set("view engine", "handlebars");
