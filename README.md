@@ -1,2 +1,2 @@
-# spice-petition
-Online petition to reunite the Spice Girls - SPICED ACADEMY student project
+# wc-petition
+Online petition to get more public toilets in Berlin - SPICED ACADEMY student project
