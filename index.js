@@ -283,7 +283,6 @@ app.get("/signers", requireUserId, requireSignature, function(req, res) {
     return db
         .getSigners()
         .then(function(result) {
-            console.log(result);
             res.render("signers", {
                 layout: "main",
                 signers: result.rows,
